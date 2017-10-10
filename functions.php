@@ -5642,3 +5642,10 @@ function wp_cache_get_last_changed( $group ) {
 
 	return $last_changed;
 }
+
+/**
+ * Remove Jetpack's dashboard ads
+ * E.g. for services like VaultPress, etc.
+ * Suggested by Automattic, Inc. support 2017-10-10
+ */
+add_filter( 'jetpack_just_in_time_msgs', '__return_false', 99 );
